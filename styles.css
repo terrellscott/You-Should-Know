@@ -1,5 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo&family=Bebas+Neue&family=League+Spartan&family=Libre+Baskerville:ital@0;1&family=Roboto&family=Rokkitt&display=swap");
 
+@media(max-width: 425px) {
+  .container {
+    background-color: #666;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-areas:
+      "hd"
+      "main" 
+      "sd "
+      "ft";
+        gap: 5px;
+  }  
+}
+
+@media(min-width: 450px) and (max-width: 1023px) {
+  .container {
+    background-color: aquamarine;
+ 
+  
+  }
+}
+
+@media(min-width: 1024px) {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -9,8 +33,9 @@
     "main main main main main main sd sd "
     "ft ft ft ft ft ft ft ft";
   gap: 20px;
+ 
 }
-
+}
 li a:hover {
   color: #febd2f;
 }
@@ -126,17 +151,17 @@ figcaption {
   font-weight: bold;
 }
 
-button {
-  background-color: #fff;
-  border: 2px solid #000;
-  color: #000;
-  padding: 15px 32px;
-  text-align: center;
-  font-family: "montserrat", sans-serif;
-  font-size: 16px;
+.frame {
   font-weight: bold;
-  margin: 4px 2px;
-  cursor: pointer;
+  color: #000;
+  border: 2px solid #000;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.frame:hover {
+  color: #febd2f;
 }
 
 button a {
@@ -185,6 +210,7 @@ button a:hover {
 
 .nestedGrid {  
   border-bottom: 2px solid #000;
+  padding: 25px;
 }
 
 .nestedGrid h3 {
@@ -220,3 +246,4 @@ button a:hover {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
+
