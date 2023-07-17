@@ -1,89 +1,189 @@
 <!DOCTYPE html>
 <html lang="En">
-    <head>
-        <meta charset="utf-8">
-        <title>Personal Blog Home Page</title>
-        <meta name="description" content="">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="container">
-        <div class="header">
-            <h1>You Should Know</h1>
+  <head>
+    <meta charset="utf-8" />
+    <title>Personal Blog Home Page</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/2a3a4b51b8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1><a href="index.html">Things You Should Know</a></h1>
+        <nav>
+          <ul>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="tv.html">TV</a></li>
+          </ul>
+        </nav>
+        <div class="socials">
+          <a href="https://www.twitter.com/terrellscott" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="https://www.instagram.com/bigrell215" target="_blank">
+            <i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://www.facebook.com/bigrell" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
         </div>
+      </div>
 
-        <div class="content">
-            <div class="card">
-                <div class="card-header">
-                    <img src="images/marvincard500.jpg" alt="Marvin Gaye">
-                    <figcaption>Universal Music Group</figcaption>
-                </div>
-                <div class="cardBody">
-                    <span class="tag">Music</span>
-                    <h3>Marvin Gaye's "What's Going On" will always be the greatest album of all time</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
-                    <p><a href="whatsGoingOnAlbum">Continue Reading</a></p>
-                </div>
-                <div class="cardFooter">
-                    <h4>Terrell Scott</h4>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <img src="images/thewire.jpg" alt="Marvin Gaye">
-                    <figcaption>HBO</figcaption>
-                </div>
-                <div class="cardBody">
-                    <span class="tag">TV</span>
-                    <h3>"The Wire" is like watching a book</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
-                    <p><a href="whatsGoingOnAlbum">Continue Reading</a></p>
-                </div>
-                <div class="cardFooter">
-                    <h4>Terrell Scott</h4>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <img src="images/marvincard500.jpg" alt="Marvin Gaye">
-                    <figcaption>Universal Music Group</figcaption>
-                </div>
-                <div class="cardBody">
-                    <span class="tag">Music</span>
-                    <h3>Marvin Gaye's "What's Going On" will always be the greatest album of all time</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
-                    <p><a href="whatsGoingOnAlbum">Continue Reading</a></p>
-                </div>
-                <div class="cardFooter">
-                    <h4>Terrell Scott</h4>
-                </div>
-            </div>
-        </div>
-        <div class="sidebar">
-            <div class="nestedGrid">
-                <p>Top 5 Albums</p>
-                <ol>
-                    <li>Illmatic</li>
-                    <li>Reasonable Doubt</li>
-                    <li>Ready to Die</li>
-                    <li>Enter the Wu-Tang</li>
-                    <li>Life After Death</li>
-                </ol>
-            </div>
-            <div class="nestedGrid">
-                <p>Top 5 Albums</p>
-                <ol>
-                    <li>Illmatic</li>
-                    <li>Reasonable Doubt</li>
-                    <li>Ready to Die</li>
-                    <li>Enter the Wu-Tang</li>
-                    <li>Life After Death</li>
-                </ol>
-            </div>
-            
-        </div>
+      <div class="content">
+        <div class="card">
+          <div class="card-header">
+            <img src="images/marvincard500.jpg" alt="Marvin Gaye" />
+            <figcaption>Universal Music Group</figcaption>
+          </div>
+          <div class="cardBody">
+            <span class="tag">Music</span>
+            <h3>
+              Marvin Gaye's "What's Going On" will always be the greatest album
+              of all time
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea
+              atque quidem!
+            </p>
+            <button><a href="whatsGoingOnAlbum">Continue Reading</a></button>
+          </div>
+          <div class="cardFooter">
+            <div class="user">
+              <img
+                src="images/profile.jpg"
+                alt="Writer Terrell Scott"
+                class="userImage"
+              />
 
-        <div class="footer box">Terrell Scott</div>
-         </div>
-    </body>
+              <div class="userInfo">
+                <h4>Terrell Scott</h4>
+                <small>July 16, 2023</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <img src="images/thewire.jpg" alt="Marvin Gaye" />
+            <figcaption>HBO</figcaption>
+          </div>
+          <div class="cardBody">
+            <span class="tag">TV</span>
+            <h3>"The Wire" is like watching a book</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea
+              atque quidem!
+            </p>
+            <button><a href="theWireTv">Continue Reading</a></button>
+          </div>
+          <div class="cardFooter">
+            <h4>Terrell Scott</h4>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <img
+              src="images/eternalSunshine.jpg"
+              alt="Jim Carrey and Kate Winslet"
+            />
+            <figcaption>Focus Pictures</figcaption>
+          </div>
+          <div class="cardBody">
+            <span class="tag">Movies</span>
+            <h3>
+              "Eternal Sunshine of the Spotless Mind" - Jim Carrey's best movie
+              is not a comedy
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea
+              atque quidem!
+            </p>
+            <button><a href="eternalSunshineMovie">Continue Reading</a></button>
+          </div>
+          <div class="cardFooter">
+            <h4>Terrell Scott</h4>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="nestedGrid">
+          <h3>Top 10 Albums</h3>
+          <ol>
+            <a href="#"
+              ><li><i>What's Going On</i>, Marvin Gaye</li></a
+            >
+            <a href="#"
+              ><li><i>Songs In The Key of Life</i>, Stevie Wonder</li></a
+            >
+            <a href="#"
+              ><li><i>Voodoo</i>, D'Angelo</li></a
+            >
+            <a href="#"
+              ><li><i>A Charlie Brown Christmas</i>, Vince Guaraldi Trio</li></a
+            >
+            <a href="#"
+              ><li><i>The Miseducation of Lauryn Hill</i>, Lauryn Hill</li></a
+            >
+            <a href="#"
+              ><li><i>Kind of Blue</i>, Miles Davis</li></a
+            >
+            <a href="#"
+              ><li><i>Legend</i>, Bob Marley</li></a
+            >
+            <a href="#"
+              ><li><i>Aquemini</i>, Outkast</li></a
+            >
+            <a href="#"
+              ><li><i>The Low End Theory</i>, A Tribe Called Quest</li></a
+            >
+            <a href="#"
+              ><li><i>Jagged Little Pill</i>, Alanis Morrisette</li></a
+            >
+          </ol>
+        </div>
+        <div class="nestedGrid">
+          <h3>Top 10 Movies</h3>
+          <ol>
+            <li>Goodfellas</li>
+            <li>The Shawshank Redemption</li>
+            <li>The Godfather</li>
+            <li>Se7en</li>
+            <li>Heat</li>
+            <li>The Usual Suspects</li>
+            <li>Avengers: Endgame</li>
+            <li>Leon, The Professional</li>
+            <li>Star Wars: The Empire Strikes Back</li>
+            <li>Forest Gump</li>
+          </ol>
+        </div>
+        <div class="nestedGrid">
+          <h3>Top 10 TV Shows</h3>
+          <ol>
+            <li>The Wire</li>
+            <li>The Sopranos</li>
+            <li>Breaking Bad</li>
+            <li>The Office</li>
+            <li>Curb Your Enthusiasm</li>
+            <li>Better Call Saul</li>
+            <li>Game of Thrones</li>
+            <li>Mad Men</li>
+            <li>Arrested Development</li>
+            <li>Cheers</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="footer box">
+        <p>Terrell Scott &copy; 2023</p>
+      </div>
+    </div>
+  </body>
 </html>
