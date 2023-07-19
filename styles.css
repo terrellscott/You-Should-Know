@@ -1,211 +1,278 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo&family=Bebas+Neue&family=League+Spartan&family=Libre+Baskerville:ital@0;1&family=Roboto&family=Rokkitt&display=swap");
 
-@media(max-width: 425px) {
-  .container {
-    background-color: #666;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr auto 1fr;
-    grid-template-areas:
-      "hd"
-      "main" 
-      "sd "
-      "ft";
-        gap: 5px;
-  }  
+* {
+    padding: 0;
+    margin: 0;
+   
 }
 
-@media(min-width: 450px) and (max-width: 1023px) {
-  .container {
-    background-color: aquamarine;
+/*Small Screens*/
+@media(max-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr ;
+        grid-template-areas: 
+        "hd "
+        "main "
+        "sd"
+        "ft ";
+        background-color: aquamarine;
+        border: 1px solid black;
+        grid-gap: 1rem;
+        width: 100% ;
+    }
+
+    .header{
+        flex-direction: column;
+        align-items: space-between;
+    }
+
+    .header .socials {
+        width:100%;
+        justify-content: space-around;
+    }
+}
+
+/*Medium Screens*/
+@media(min-width: 601px) and (max-width: 901px) {
+    .container {
+        background-color: powderblue;
+        display: grid;
+        flex-direction: column;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 2fr auto 1fr;
+        grid-template-areas:
+          "hd hd hd hd hd hd hd hd"
+          "main main main main main sd sd sd "
+          "ft ft ft ft ft ft ft ft";
+            gap: 5px;
  
-  
-  }
+    }
+
+    .header{
+        flex-direction: row;
+    }
+
+
 }
 
-@media(min-width: 1024px) {
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr auto 1fr;
-  grid-template-areas:
-    "hd hd hd hd hd hd hd hd"
-    "main main main main main main sd sd "
-    "ft ft ft ft ft ft ft ft";
-  gap: 20px;
- 
-}
-}
-li a:hover {
-  color: #febd2f;
+/*Large Screens*/
+@media(min-width: 902px) {
+    .container {
+        display: grid;
+        grid-template-columns: 49% 24% 24% ;
+        grid-template-rows: 2fr 8fr 1fr;
+        grid-template-areas: 
+        "hd hd hd "
+        "main main sd"
+        "ft ft ft";
+        background-color: aqua;
+        border: 1px solid black;
+        grid-gap: 1rem;
+   
+    }
+
+    .header{
+        flex-direction: row;
+      
+    }
 }
 
-/*header*/
 .header {
-  grid-area: hd;
-  display: flex;
-  padding: 10px;
-  font-family: "Bebas Neue", sans-serif;
-  text-align: center;
-  border: 10px solid #000;
-  justify-content: space-between;
-}
+    grid-area: hd;
+    border: .5rem solid black;
+    display: flex;
+    text-align: center; 
+    justify-content: space-between;
+   }
+
 .header h1 {
-  font-size: 50px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;    
 }
+
 
 .header a {
-  text-decoration: none;
-  color: #000;
+    text-decoration: none;
+    color: #000;
 }
+
+a:hover {
+    color: #febd2f;
+  }
 
 nav {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Roboto';
+  }
+
+  nav li {
+    display: block;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 'roboto', sans-serif;
+
+  }
+
+  nav li a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    width: 20%;
+   
+  }
+  
+  .fa-brands {
+    font-size: 30px;
+    color: #000;
+  }
+  
+  .fa-brands:hover {
+    color: #febd2f;
+  }
+  
+                                        /* Main Content Area*/
+
+.main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
-ul {
-  display: flex;
-  list-style-type: none;
-  font-family: "montserrat", sans-serif;
-  font-size: 20px;
-}
-
-nav li {
-  display: block;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-nav li a {
-  color: #000;
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.socials {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 200px;
-  padding: 20px;
-}
-
-.fa-brands {
-  font-size: 30px;
-  color: #000;
-}
-
-.fa-brands:hover {
-  color: #febd2f;
-}
-
-/*main*/
-.content {
-  grid-area: main;
-  display: grid;
-  gap: 20px;
-}
-
-/*Content Cards*/
+/*content cards*/
 .card {
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-  align-items: center;
-  border: 2px solid #000;
-  box-shadow: 5px 10px #000;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #000;
+    box-shadow: 5px 10px #000;
+    margin: 10px;
+    padding-top: 5px;
+  }
 
-.card img {
-  height: 500px;
-  width: 500px;
-}
+    figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;}
 
-figcaption {
-  text-align: end;
-  font-style: italic;
-}
+  .card-image {
+    object-fit: cover;
+    max-width:90%;
+    height: auto;
+    border: 2px solid #000;
+    
+  }
 
-.cardBody {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  figcaption {
+    text-align: end;
+    font-style: italic;
+    font-size: .7rem;
+    width: 80%;
+  }
 
-  width: 500px;
-  font-family: "montserrat", sans-serif;
-}
+  .card-body {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;    
+    width: 90%;
+    font-family: "montserrat", sans-serif;
+    gap: 1rem;
+    
+  }
 
-.tag {
-  align-self: flex-start;
+  .tag {
+    align-self: flex-start;  
+    border-radius: 1em;
+    font-family: "bebas neue", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+  }
 
-  border-radius: 1em;
-  font-family: "bebas neue", sans-serif;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
+  .frame {
+    font-weight: bold;
+    color: #000;
+    border: 2px solid #000;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .frame:hover {
+    color: #febd2f;
+  }
 
-.frame {
-  font-weight: bold;
-  color: #000;
-  border: 2px solid #000;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-}
+  .card-footer {
+    display: flex;
+    padding: 1rem;
+    margin-top: auto;
+    width: 90%;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .user {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+   
+     }
+  
+  .user img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;    
+  }
 
-.frame:hover {
-  color: #febd2f;
-}
+  .userInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .card-footer h4 {
+    font-family: "montserrat", sans-serif;
+  }  
+  
+  .userInfo > small {
+    font-family: "montserrat", sans-serif;
+    color: #666;
+  }
 
-button a {
-  text-decoration: none;
-  color: #000;
-}
-
-button a:hover {
-  color: #febd2f;
-}
-
-.cardFooter {
-  display: flex;
-  padding: 1rem;
-  margin-top: auto;
-  width: 500px;
-}
-
-.user {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.user img {
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-}
-
-.cardFooter h4 {
-  font-family: "montserrat", sans-serif;
-}
-
-
-
-.userInfo > small {
-  font-family: "montserrat", sans-serif;
-  color: #666;
-}
-
-/*sidebar*/
+                        /* Sidebar */
 .sidebar {
-  grid-area: sd;
-  padding: 5px;
+    grid-area: sd;
+}
+
+.footer {
+    grid-area: ft;
 }
 
 .nestedGrid {  
@@ -231,11 +298,7 @@ button a:hover {
   color: #000;
 }
 
-.nestedGrid a:hover {
-  color: #febd2f;
-}
-
-/*footer*/
+                                 /* Footer */
 .footer {
   grid-area: ft;
   padding: 10px;
