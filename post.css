@@ -91,11 +91,12 @@ a:hover {
   
                                         /* Main Content Area*/
 
-/*Candid Picture*/
+/*Hero */
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 /*Media Info*/
@@ -180,3 +181,20 @@ a:hover {
     color: #febd2f;
   }
 
+/*Media Queries*/ 
+/*Small Screens*/
+@media(max-width: 600px){
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr ;
+    grid-template-areas: 
+    "header"
+    "main "
+    "sd"
+    "ft ";
+    grid-gap: 1rem;
+    width: 100% ;
+  }
+  
+}
