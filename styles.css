@@ -14,7 +14,7 @@
     text-align: center; 
     justify-content: space-between;
     padding: 10px;
-    font-family: 'lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
    }
 
 /*Logo*/
@@ -63,7 +63,7 @@ nav {
     text-decoration: none;
   }
 
-/*Subsrcribe Link*/
+/*Subscribe Link*/
   .header span {
     display: flex;
     min-width: 100px;
@@ -187,8 +187,7 @@ nav {
     grid-area: sd;
 }
 
-
-
+/*Best List*/
 .nestedGrid {  
   display: grid;
   border-bottom: 2px solid #000;
@@ -204,7 +203,7 @@ nav {
   grid-gap:  20px;
   align-items: center;
 }
-
+/*Yellow Line*/
 .nestedGrid h3::before, .nestedGrid h3::after {
   content: "";
   display: block;
@@ -216,8 +215,6 @@ nav {
   .nestedGrid h3:after {
    --direction: right;
   }
-
-
 
 .nestedGrid ol {
   font-family: "montserrat", sans-serif;
