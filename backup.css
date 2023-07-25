@@ -6,7 +6,8 @@
  }
 
  .container {
-     grid-gap: 20px;
+    display: grid;
+    grid-gap: 20px;
     overflow: hidden;
     min-width: 0;
   }
@@ -62,7 +63,7 @@ a:hover {
   ul {
     display: flex;
     list-style-type: none;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: lighter;    
   }
 
@@ -94,13 +95,10 @@ a:hover {
   display: grid;
   justify-content: center;
   align-items: center;
-}
-
-.hero img {
   width: 100%;
   height: auto;
-  object-fit: cover;
 }
+
 /*Media Info*/
 .wrapper {
   display: grid;
@@ -129,6 +127,7 @@ a:hover {
   flex-direction: column;
   justify-content: space-around;  
   align-content: space-evenly;
+  max-width: 400px; 
   padding-left: 15%;
   font-family: "montserrat", sans-serif;
 }
@@ -154,7 +153,6 @@ a:hover {
 
 /*Footer*/
   .footer {
-    grid-area: ft;
    padding: 10px;
    border-top: .3rem solid #000;
    display: flex;
@@ -193,59 +191,23 @@ a:hover {
     grid-template-areas: 
     "header"
     "main "
-    "ft ";    
+    "sd"
+    "ft ";
+    
     width: 100%;
-    grid-gap: 20px;   
+    grid-gap: 20px;
+   
   }
 
-  .header {    
+  .header {
+    
     display: flex;
     grid-template-areas:
     "logo"
     "nav"
     "sub";
-    flex-direction: column;  
-  }
-
-  .wrapper {
-    grid-template-areas:
-    "details"
-    "cover"
-    "content";
-    flex-direction: row;
-    grid-template-columns: 1fr;
-    grid-template-rows: .5fr 1fr 2fr;  
-    min-height: auto;  
-  }
-
-  .details {
-    padding-left: 0;
-    border-bottom: 2px solid #000;
-    border-top: 2px solid #000;
-    
+    flex-direction: column;
+  
   }
   
-}
-
-/*Medium Screens*/
-
-@media(min-with: 601px) and (max-width: 901px){
-  .container {
-    flex-direction: row;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr ;
-    grid-template-areas: 
-    "header header"
-    "main main"
-    "ft ft";    
-    width: 100%;
-    grid-gap: 20px;  
-  }
-
-  .details {
-    justify-content: space-around;
-    border-top: 2px solid #000;
-  }
-
 }
