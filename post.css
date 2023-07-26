@@ -89,8 +89,15 @@ a:hover {
   
                                         /* Main Content Area*/
 
-/*Hero */
+.main {
+  
+  grid-area: main;
+
+}
+
+/*Hero Image*/
 .hero {
+  grid-area: hero;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -112,12 +119,15 @@ a:hover {
   "cover content content"
   "details content content";
 } 
-
 .cover {
   grid-area: cover;
   display: flex;
   justify-content: center;
   align-items: center;  
+  max-width: 100%;
+}
+
+.cover img {  
   object-fit: cover;
   width: 100%;
 }
@@ -137,20 +147,73 @@ a:hover {
   font-family: "cabin", sans-serif;
 }
 
+/*Post Content*/
+
 .content {
   grid-area: content;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center;  
   padding: 20px;
-  border-left: 5px solid #febd2f;
-  font-family: "montserrat", sans-serif;
-  color: #666;
-  text-indent: 50px;
+  border-left: 5px solid #febd2f;  
+  grid-gap: 20px;
+}
+
+.content-info {
+  
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
   
 }
 
+.tag {
+  justify-content: start;
+  border-radius: 1em;
+  font-family: "bebas neue", sans-serif;
+  font-size: 1rem;
+  align-content: flex-start;  
+}
+
+.wrapper h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  color: #000;
+}
+.user {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+ 
+   }
+
+.user img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;    
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-family: "montserrat", sans-serif;
+  color: #666;
+}
+
+.user h4 {
+  font-weight: bold;
+  color: #000;
+}
+  
+.content p {
+  font-family: "montserrat", sans-serif;
+  color: #666;
+  text-indent: 50px;
+}
 
 /*Footer*/
   .footer {
@@ -189,7 +252,7 @@ a:hover {
   .container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr ;
+    grid-template-rows: .5fr 8fr .1fr;
     grid-template-areas: 
     "header"
     "main "
@@ -207,45 +270,43 @@ a:hover {
     flex-direction: column;  
   }
 
+  .main {
+    display: flex;
+    grid-template-areas: 
+    "hero"
+    "wrapper";
+    flex-direction: column;
+    grid-template-columns: 2fr 8fr;
+  }
+
   .wrapper {
     grid-template-areas:
+    "content"
     "details"
-    "cover"
-    "content";
+    "cover";
     flex-direction: row;
     grid-template-columns: 1fr;
-    grid-template-rows: .5fr 1fr 2fr;  
+    grid-template-rows: 3fr 1fr 1fr;  
     min-height: auto;  
   }
 
   .details {
     padding-left: 0;
     border-bottom: 2px solid #000;
-    border-top: 2px solid #000;
-    
+    border-top: 2px solid #000;    
   }
-  
 }
 
 /*Medium Screens*/
 
-@media(min-with: 601px) and (max-width: 901px){
-  .container {
-    flex-direction: row;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr ;
-    grid-template-areas: 
-    "header header"
-    "main main"
-    "ft ft";    
-    width: 100%;
-    grid-gap: 20px;  
-  }
+@media(min-width: 601px) and (max-width: 901px) {
+ .cover {
+  border-bottom: 2px solid #000;
+ }
 
-  .details {
-    justify-content: space-around;
-    border-top: 2px solid #000;
-  }
+ .details {
+  justify-content: space-evenly;
+ }
 
+ 
 }
