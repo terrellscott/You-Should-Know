@@ -46,8 +46,7 @@ nav {
   ul {
     display: flex;
     list-style-type: none;
-    font-size: 1.5em;
-    font-weight: lighter;    
+    font-size: 1.5em;    
   }
 
   nav li {
@@ -174,11 +173,13 @@ nav {
     align-items: flex-start;
     gap: 0.5rem;
     font-size: 1rem;
-  }
-  
-  .card-footer h4 {
     font-family: "montserrat", sans-serif;
+    color: #666;
   }  
+  .user h4 {
+    font-weight: bold;
+    color: #000;
+  }
   
   .userInfo > small {
     font-family: "montserrat", sans-serif;

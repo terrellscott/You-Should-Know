@@ -1,98 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin&family=Montserrat&display=swap');
-
-* {
-  padding: 0;
-  margin: 0;
- }
-
- .container {
-     grid-gap: 20px;
-    overflow: hidden;
-    min-width: 0;
-  }
-    
-.container figure>figcaption {
-  text-align: right;
-  font-style: italic;
-    font-size: .7rem;
-}
-    
-                                    /*Header*/
-.header {   
-    grid-area: header;
-    border: .75rem solid black;
-    display: grid;
-    align-items: center;
-    text-align: center; 
-    justify-content: space-evenly;
-    padding: 10px;
-    font-family: 'Roboto', sans-serif;
-    grid-template-areas: "logo logo nav sub";
-    grid-template-columns: 1fr 1fr 1fr 1fr;   
-   }
-
-/*Logo*/
-
-.logo  {
-  grid-area: logo;
-  font-family: "Bebas Neue", sans-serif;
-  text-align: center; 
-  font-size: 2.5em;
-  justify-self: start;
-      
-}
-
-.header a {
-    text-decoration: none;
-    color: #000;
-}
-
-a:hover {
-    color: #febd2f;
-  }
-
-/*Navigation*/
-
-.nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  ul {
-    display: flex;
-    list-style-type: none;
-    font-size: 1em;
-    font-weight: lighter;    
-  }
-
-  nav li {
-    display: block;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    }
-
-  nav li a {
-    color: #000;
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-/*Subscribe Link*/
-  .header span {
-    grid-area: sub;   
-    min-width: 100px;
-  }
-  
-                                        /* Main Content Area*/
-
-.main {
-  
-  grid-area: main;
-
+                                        /* Post Content Area*/
+.post {
+  display: grid;
+  grid-template-areas: 
+  "hd"
+  "cont"
+  "ft";
 }
 
 /*Hero Image*/
@@ -113,11 +25,11 @@ a:hover {
   display: grid;
   grid-gap: 20px;
   padding: 20px;
-  grid-template-columns: 1fr 1fr 1fr;
+ 
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
-  "cover content content"
-  "details content content";
+  "cover art art"
+  "details art art";
 } 
 .cover {
   grid-area: cover;
@@ -129,6 +41,7 @@ a:hover {
 
 .cover img {  
   object-fit: cover;
+  height: auto;
   width: 100%;
 }
 
@@ -137,8 +50,7 @@ a:hover {
   display: flex;
   text-align: left;
   flex-direction: column;
-  justify-content: space-around;  
-  align-content: space-evenly;
+  justify-content: space-evenly;  
   padding-left: 15%;
   font-family: "montserrat", sans-serif;
 }
@@ -149,30 +61,20 @@ a:hover {
 
 /*Post Content*/
 
-.content {
-  grid-area: content;
+.article {
+  grid-area: art;
   display: flex;
   flex-direction: column;
-  justify-content: center;  
+  justify-content: space-between;
   padding: 20px;
+  grid-gap: 25px;
   border-left: 5px solid #febd2f;  
-  grid-gap: 20px;
 }
 
-.content-info {
-  
+.article-info {  
   display: flex;
   flex-direction: column;
-  grid-gap: 20px;
-  
-}
-
-.tag {
-  justify-content: start;
-  border-radius: 1em;
-  font-family: "bebas neue", sans-serif;
-  font-size: 1rem;
-  align-content: flex-start;  
+  grid-gap: 20px;      
 }
 
 .wrapper h2 {
@@ -180,71 +82,22 @@ a:hover {
   font-size: 2rem;
   color: #000;
 }
-.user {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: flex-start;
- 
-   }
 
-.user img {
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;    
-}
-
-.userInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  gap: 0.5rem;
-  font-size: 1rem;
+.article p {
   font-family: "montserrat", sans-serif;
-  color: #666;
-}
-
-.user h4 {
-  font-weight: bold;
-  color: #000;
-}
-  
-.content p {
-  font-family: "montserrat", sans-serif;
-  color: #666;
-  text-indent: 50px;
-}
-
-/*Footer*/
-  .footer {
-    grid-area: ft;
-   padding: 10px;
-   border-top: .3rem solid #000;
-   display: flex;
-   align-items: center;   justify-content: center;
-   font-family: "Roboto", sans-serif;
-   font-weight: bold;
-   flex-direction: row;
-   justify-content: space-around;
-   height: 5rem;
+   text-indent: 50px;
  }
-                                
-/*Social Media Icons*/
-   .socials {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-     padding: 5px;
-    width: 20%;   
-  }
-  .fa-brands {
-   font-size: 1.5rem;
-    color: #000;
-  }
-  
-  .fa-brands:hover {
-    color: #febd2f;
-  }
+
+blockquote {
+  grid-column: 1 / -1;
+  font-size: 50px;
+  font-style: italic;
+  color: #666;
+  text-align: center;
+  margin: 0;
+}
+
+
 
 /*Media Queries*/ 
 /*Small Screens*/
@@ -270,24 +123,20 @@ a:hover {
     flex-direction: column;  
   }
 
-  .main {
-    display: flex;
-    grid-template-areas: 
-    "hero"
-    "wrapper";
-    flex-direction: column;
-    grid-template-columns: 2fr 8fr;
+  .nav ul {
+    font-size: 1rem;
+    font-weight: 200;
   }
 
   .wrapper {
     grid-template-areas:
-    "content"
+    "art"
     "details"
     "cover";
     flex-direction: row;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 1fr 1fr;  
-    min-height: auto;  
+    grid-template-rows: 2fr .5fr .5fr;  
+    /* min-height: auto;   */
   }
 
   .details {
@@ -304,9 +153,8 @@ a:hover {
   border-bottom: 2px solid #000;
  }
 
- .details {
-  justify-content: space-evenly;
+ .wrapper {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
  }
-
- 
 }
