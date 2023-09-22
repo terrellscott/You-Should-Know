@@ -1,80 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Bebas+Neue&family=Comfortaa&family=League+Spartan&family=Libre+Baskerville:ital@0;1&family=Roboto&family=Rokkitt&display=swap');
-
+/* Main Content Area*/
 * {
   padding: 0;
   margin: 0;
  }
- 
-                                    /*Header*/
-.header {
-    grid-area: hd;
-    border: .75rem solid black;
-    display: flex;
-    align-items: center;
-    text-align: center; 
-    justify-content: space-between;
-    padding: 10px;
-    font-family: 'Roboto', sans-serif;
-   }
-
-/*Logo*/
-
-.header h1 {
-    grid-area: lg;
-    font-family: "Bebas Neue", sans-serif;
-      text-align: center; 
-}
-
-.header a {
-    text-decoration: none;
-    color: #000;
-}
-
-a:hover {
-    color: #febd2f;
-  }
-
-/*Navigation*/
-
-nav {
-    grid-area: nv;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  ul {
-    display: flex;
-    list-style-type: none;
-    font-size: 1.5em;    
-  }
-
-  nav li {
-    display: block;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    }
-
-  nav li a {
-    color: #000;
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-/*Subscribe Link*/
-  .header span {
-    grid-area: sb;
-    display: flex;
-    min-width: 100px;
-    align-content: start;
-  }
-
-                                        /* Main Content Area*/
-
-.main{
+  .main{
     grid-area: main;
     display: flex;
     flex-direction: column;
@@ -230,37 +159,6 @@ nav {
   color: #000;
 }
 
-                                 /* Footer */
-
-.footer {
-  grid-area: ft;
-  padding: 10px;
-  border-top: .3rem solid #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-/*Social Media Icons*/
-  .socials {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 5px;
-    width: 20%;   
-  }
-  .fa-brands {
-    font-size: 1.5rem;
-    color: #000;
-  }
-  
-  .fa-brands:hover {
-    color: #febd2f;
-  }
   
                             /*Media Queries*/
 /*Small Screens*/

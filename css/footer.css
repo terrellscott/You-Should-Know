@@ -1,0 +1,33 @@
+
+/* Footer */
+
+.footer {
+   grid-area: ft;
+   padding: 10px;
+   border-top: .3rem solid #000;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: "Roboto", sans-serif;
+   font-weight: bold;
+   flex-direction: row;
+   justify-content: space-around;
+ }
+ 
+ /*Social Media Icons*/
+   .socials {
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     padding: 5px;
+     width: 20%;   
+   }
+   
+   .fa-brands {
+      font-size: 1.5rem;
+      color: #000;
+    }
+                                    
+    .fa-brands:hover {
+      color: #febd2f;
+    }

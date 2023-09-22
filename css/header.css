@@ -1,0 +1,66 @@
+                                    /*Header*/
+.header {
+    grid-area: hd;
+    border: .75rem solid black;
+    display: flex;
+    align-items: center;
+    text-align: center; 
+    justify-content: space-between;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+   }
+
+/*Logo*/
+
+.header h1 {
+    grid-area: lg;
+    font-family: "Bebas Neue", sans-serif;
+      text-align: center; 
+}
+
+.header a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #febd2f;
+  }
+
+/*Navigation*/
+
+nav {
+    grid-area: nv;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 1.5em;    
+  }
+
+  nav li {
+    display: block;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+
+  nav li a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+/*Subscribe Link*/
+  .header span {
+    grid-area: sb;
+    display: flex;
+    min-width: 100px;
+    align-content: start;
+  }
