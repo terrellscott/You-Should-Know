@@ -13,12 +13,14 @@
   display: grid;
   justify-content: center;
   align-items: center;
+  padding-top: 10px;
 }
 
 .hero img {
   width: 100%;
   height: auto;
   object-fit: cover;
+  border: 1px solid #000;
 }
 /*Media Info*/
 .wrapper {
@@ -43,6 +45,7 @@
   object-fit: cover;
   height: auto;
   width: 100%;
+  border: 1px solid #000;
 }
 
 .details {
